@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App7.Views.ItemsPage"
+             Title="Rechner"
+             xmlns:local="clr-namespace:App7.ViewModels"  
+             xmlns:model="clr-namespace:App7.Models"  
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout>
+
+            <Label Text="Bitte geben Sie ihre Datenbank Verbindungsdaten ein" FontSize="Large" Margin="15,20,10,30"/>
+
+            <Entry x:Name="dbsize" Placeholder="Größe der Datenbank" Margin="10,15,10,10" />
+
+            <Button Text="Automatisch ermitteln" Margin="20,-5,20,10"/>
+
+            <Entry x:Name="internetspeed" Placeholder="Internet Anbindung in Mbit/s" Margin="10,15,10,10" />
+
+            <Button Text="Automatisch ermitteln" Margin="20,-5,20,10"/>
+
+
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
