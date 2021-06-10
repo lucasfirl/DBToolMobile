@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App7.Views.Calculating"
+             Title="Rechner">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Bitte geben Sie ihre Datenbank Informationen ein" FontSize="Large" Margin="15,20,10,30"/>
+
+            <Entry x:Name="dbsize" Placeholder="Größe der Datenbank" Margin="10,15,10,10" />
+
+            <Picker x:Name="einheitpicker" Margin="10,-15,10,10" SelectedIndex="{Binding Industry}" Title="Wähle eine Einheit">
+                <Picker.Items>
+                    <x:String>Byte</x:String>
+                    <x:String>Kilobyte</x:String>
+                    <x:String>Megabyte</x:String>
+                    <x:String>Gigabyte</x:String>
+                    <x:String>Terrabyte</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button x:Name="sizebutton" Text="Automatisch ermitteln" Margin="20,-5,20,0" Clicked="Button_Dbsizeauto"/>
+            
+            <ActivityIndicator x:Name="loading" Margin="0,5,0,0" IsRunning="false" />
+
+            <Entry x:Name="internetspeed" Placeholder="Internet Anbindung in Mbit/s" Margin="10,0,10,10"/>
+
+            <Button x:Name="speedbutton" Text="Automatisch ermitteln" Margin="20,-5,20,10" Clicked="Button_Speedauto"/>
+
+            <Button x:Name="berechnenbutton" Text="umrechnen" Margin="20,15,20,10" Clicked="Button_Check" BackgroundColor="DeepSkyBlue"/>
+
+            <Label x:Name="resultlabel" Text="Geschätzte Download Zeit:" FontSize="Medium" Margin="15,20,10,30"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>Xiaomi Mi 9T</SelectedDevice>
     <ActiveDebugProfile>Xiaomi Mi 9T</ActiveDebugProfile>
+    <DefaultDevice>pixel_2_pie_9_0_-_api_28</DefaultDevice>
   </PropertyGroup>
 </Project>

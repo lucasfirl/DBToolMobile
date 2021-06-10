@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App7.Views.DBInfo"
+             Title="SQL Verbindung">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Bitte geben Sie ihre SQL Verbindungsdaten ein" FontSize="Large" Margin="15,20,10,30"/>
+
+            <Entry x:Name="dbadresse" Placeholder="Adresse / Hostname" Margin="10,15,10,10" />
+
+            <Entry x:Name="dbname" Placeholder="Datenbank Name" Margin="10,15,10,10" />
+
+            <Entry x:Name="dbuser" Placeholder="User Name" Margin="10,15,10,10" />
+
+            <Entry x:Name="dbpw" Placeholder="User Passwort" Margin="10,15,10,10" IsPassword="True" />
+
+            <Button x:Name="safebutton" Margin="20,-5,20,10" Text="speichern" Clicked="Button_Safedbinfo" />
+
+            <ActivityIndicator x:Name="loading" IsRunning="false" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

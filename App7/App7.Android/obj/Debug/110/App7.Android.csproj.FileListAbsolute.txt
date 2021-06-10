@@ -577,3 +577,4 @@ C:\Users\Larry\source\repos\App7\App7\App7.Android\obj\Debug\110\stamp\_ConvertR
 C:\Users\Larry\source\repos\App7\App7\App7.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\Larry\source\repos\App7\App7\App7.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Larry\source\repos\App7\App7\App7.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Larry\source\repos\App7\App7\App7.Android\obj\Debug\110\android\assets\System.Data.SqlClient.dll

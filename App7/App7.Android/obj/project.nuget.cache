@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "smzX0rssIh1Y155SHnOXwZ4sk22vYTQm6Vl9k9X0XF/VkhCnXE7zVyyYR5q8YozbN8pCsm79GXDTm93xnLtkgw==",
+  "dgSpecHash": "SmsQ2hWwpauu/JF673B822qO2V1VTswZw5Aok2+Kp7/EqIcTAhx3twv5ZCv57htbvds88BtY7SyqyUWle+6n/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Larry\\source\\repos\\App7\\App7\\App7.Android\\App7.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Larry\\.nuget\\packages\\system.data.sqlclient\\4.8.2\\system.data.sqlclient.4.8.2.nupkg.sha512",
     "C:\\Users\\Larry\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.annotation\\1.1.0.8\\xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",

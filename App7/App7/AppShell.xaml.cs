@@ -1,5 +1,4 @@
-﻿using App7.ViewModels;
-using App7.Views;
+﻿using App7.Views;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
