@@ -17,7 +17,10 @@ namespace App7.Views
         public Calculating()
         {
             InitializeComponent();
+            internetspeed.Text = "";
+            dbsize.Text = "";
         }
+        private bool accept = false;
 
 
         private async void Button_Dbsizeauto(object sender, EventArgs e)
@@ -37,13 +40,33 @@ namespace App7.Views
             }
         }
 
-        private async void Button_Speedauto(object sender, EventArgs e)
+        private async Task RunSpeedcheck()
         {
             speedbutton.IsEnabled = false;
             loading.IsRunning = true;
             internetspeed.Text = await Task.Run(() => Methoden.Speedcheck());
             speedbutton.IsEnabled = true;
             loading.IsRunning = false;
+        }
+
+        private async void Button_Speedauto(object sender, EventArgs e)
+        {
+            //bool displayok = await DisplayAlert("Warnung", "Die Automatische Downloadspeed ermittlung verbraucht in der Regel 25Mb Datenvolume. \n\n Möchten Sie fortfahren?", "Ja", "Nein");
+
+            if (accept)
+            {
+                await RunSpeedcheck();
+            }
+            else
+            {
+                bool displayok = await DisplayAlert("Warnung", "Die automatische Downloadspeed Ermittlung verbraucht in der Regel 25Mb Datenvolume. \n\n Möchten Sie fortfahren?", "Ja", "Nein");
+
+                if (displayok)
+                {
+                    accept = true;
+                    await RunSpeedcheck();
+                }
+            }
         }
 
 
