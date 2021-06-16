@@ -80,7 +80,7 @@ namespace App7.Logics
             {
                 while (reader.Read())
                 {
-                    string sum = reader["database_size"].ToString().Substring(0, reader["database_size"].ToString().IndexOf(" "));
+                    string sum = reader["database_size"].ToString();
                     return sum.Replace(".", ",");
                 }
             }
@@ -95,25 +95,25 @@ namespace App7.Logics
             SqlConnection conn = new SqlConnection(cs);
             string resulttext = "";
 
-            try
-            {
-                conn.Open();
-            }
-            catch (SqlException ex)
-            {
-                for (int i = 0; i < ex.Errors.Count; i++)
-                {
-                    errorMessages.Append("Index #" + i + "\n" +
-                        "Nachricht: " + ex.Errors[i].Message + "\n" +
-                        "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
-                        "Source: " + ex.Errors[i].Source);
-                }
-                return errorMessages.ToString();
-            }
-            finally
-            {
-                resulttext = "ok";
-            }
+            //try
+            //{
+            //    conn.open();
+            //}
+            //catch (sqlexception ex)
+            //{
+            //    for (int i = 0; i < ex.errors.count; i++)
+            //    {
+            //        errormessages.append("index #" + i + "\n" +
+            //            "nachricht: " + ex.errors[i].message + "\n" +
+            //            "linenumber: " + ex.errors[i].linenumber + "\n" +
+            //            "source: " + ex.errors[i].source);
+            //    }
+            //    return errormessages.tostring();
+            //}
+            //finally
+            //{
+            //    resulttext = "ok";
+            //}
 
             return resulttext;
         }

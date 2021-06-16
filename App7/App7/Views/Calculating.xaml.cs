@@ -33,8 +33,29 @@ namespace App7.Views
             {
                 sizebutton.IsEnabled = false;
                 loading.IsRunning = true;
-                dbsize.Text = await Task.Run(() => Methoden.CheckDBSize(Methoden.GetSetConnectionString()));
-                einheitpicker.SelectedIndex = 2;
+                string result = await Task.Run(() => Methoden.CheckDBSize(Methoden.GetSetConnectionString()));
+                string resulteinheit = result.Substring(result.IndexOf(" ") + 1);
+
+                switch (resulteinheit)
+                {
+                    case "B": // Byte
+                        einheitpicker.SelectedIndex = 0;
+                        break;
+                    case "KB": // KB
+                        einheitpicker.SelectedIndex = 1;
+                        break;
+                    case "MB": // MB
+                        einheitpicker.SelectedIndex = 2;
+                        break;
+                    case "GB": // GB
+                        einheitpicker.SelectedIndex = 3;
+                        break;
+                    case "TB": // TB
+                        einheitpicker.SelectedIndex = 4;
+                        break;
+                }
+
+                dbsize.Text = result.Substring(0, result.ToString().IndexOf(" "));
                 sizebutton.IsEnabled = true;
                 loading.IsRunning = false;
             }
